@@ -3,8 +3,7 @@
   "main": "./lib/my-atom-package-template",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "my-atom-package-template:toggle"
   },
@@ -13,6 +12,12 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
+  "scripts": {
+    "lint": "eslint lib spec"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "4.11.0",
+    "eslint-plugin-mocha": "4.11.0"
   }
 }

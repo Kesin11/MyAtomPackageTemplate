@@ -1,0 +1,27 @@
+{
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "mocha"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "mocha": true,
+    },
+    "extends": [
+      # Select your prefer base rules
+      # "eslint:recommended",
+    ],
+    "rules": {
+      # semi: ["error", "never"],
+    },
+    "globals": {
+        "atom": false,
+    }
+}
