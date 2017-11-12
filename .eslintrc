@@ -16,10 +16,11 @@
     },
     "extends": [
       # Select your prefer base rules
-      # "eslint:recommended",
+      "eslint:recommended",
     ],
     "rules": {
-      # semi: ["error", "never"],
+      # Add your prefer config
+      semi: ["error", "never"],
     },
     "globals": {
         "atom": false,
