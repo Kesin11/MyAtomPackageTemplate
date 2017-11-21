@@ -1,7 +1,7 @@
-'use babel';
+'use babel'
 
-import myAtomPackageTemplate from '../lib/my-atom-package-template';
-import { expect } from 'chai';
+import myAtomPackageTemplate from '../lib/my-atom-package-template'
+import { expect } from 'chai'
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
@@ -9,34 +9,34 @@ import { expect } from 'chai';
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe('MyAtomPackageTemplate', () => {
-  let workspaceElement;
+  let workspaceElement
 
   beforeEach(() => {
-    workspaceElement = atom.views.getView(atom.workspace);
-  });
+    workspaceElement = atom.views.getView(atom.workspace)
+  })
 
   afterEach(() => {
     myAtomPackageTemplate.deactivate()
-  });
+  })
 
   describe('when the my-atom-package-template:toggle event is triggered', () => {
     it('hides and shows the modal panel', async () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.my-atom-package-template')).to.be.null;
+      expect(workspaceElement.querySelector('.my-atom-package-template')).to.be.null
 
-      await myAtomPackageTemplate.activate({});
-      atom.commands.dispatch(workspaceElement, 'my-atom-package-template:toggle');
+      await myAtomPackageTemplate.activate({})
+      atom.commands.dispatch(workspaceElement, 'my-atom-package-template:toggle')
 
-      expect(workspaceElement.querySelector('.my-atom-package-template')).to.exist;
+      expect(workspaceElement.querySelector('.my-atom-package-template')).to.exist
 
-      let myAtomPackageTemplateElement = workspaceElement.querySelector('.my-atom-package-template');
-      expect(myAtomPackageTemplateElement).to.exist;
+      let myAtomPackageTemplateElement = workspaceElement.querySelector('.my-atom-package-template')
+      expect(myAtomPackageTemplateElement).to.exist
 
-      let myAtomPackageTemplatePanel = atom.workspace.panelForItem(myAtomPackageTemplateElement);
-      expect(myAtomPackageTemplatePanel.isVisible()).to.be.true;
-      atom.commands.dispatch(workspaceElement, 'my-atom-package-template:toggle');
-      expect(myAtomPackageTemplatePanel.isVisible()).to.be.false;
-    });
-  });
-});
+      let myAtomPackageTemplatePanel = atom.workspace.panelForItem(myAtomPackageTemplateElement)
+      expect(myAtomPackageTemplatePanel.isVisible()).to.be.true
+      atom.commands.dispatch(workspaceElement, 'my-atom-package-template:toggle')
+      expect(myAtomPackageTemplatePanel.isVisible()).to.be.false
+    })
+  })
+})
