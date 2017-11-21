@@ -1,6 +1,6 @@
 'use babel'
 
-import myAtomPackageTemplate from '../lib/my-atom-package-template'
+import MyAtomPackageTemplate from '../lib/my-atom-package-template'
 import { expect } from 'chai'
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
@@ -9,10 +9,12 @@ import { expect } from 'chai'
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe('MyAtomPackageTemplate', () => {
+  let myAtomPackageTemplate
   let workspaceElement
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace)
+    myAtomPackageTemplate = new MyAtomPackageTemplate()
   })
 
   afterEach(() => {
