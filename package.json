@@ -12,11 +12,15 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "atomTestRunner": "atom-mocha-test-runner",
   "scripts": {
-    "lint": "eslint lib spec"
+    "lint": "eslint lib spec",
+    "test": "atom --test ./spec/*.test.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "atom-mocha-test-runner": "1.2.0",
+    "chai": "4.1.2",
     "eslint": "4.11.0",
     "eslint-plugin-mocha": "4.11.0",
     "etch": "0.12.6"
